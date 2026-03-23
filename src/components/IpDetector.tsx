@@ -34,6 +34,9 @@ export default function IpDetector() {
             <p>
               <span className="text-muted-foreground">IP:</span> {ipInfo.ip}
             </p>
+            <p className="text-xs text-muted-foreground">
+              Source: {ipInfo.method === "api" ? "Public API" : ipInfo.method === "local" ? "Local (offline)" : "N/A"}
+            </p>
           </>
         )}
 
